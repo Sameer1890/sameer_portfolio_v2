@@ -8,19 +8,19 @@ export const AuthProvider = ({ children }) => {
     localStorage.getItem("auth") === "true"
   );
 
-  const navigate = useNavigate(); // ✅ Now inside a component
+  const navigate = useNavigate(); 
 
-  // Login function
+ 
   const login = () => {
     setIsAuthenticated(true);
     localStorage.setItem("auth", "true");
   };
 
-  // Logout function
+  
   const logout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem("auth");
-    navigate("/login"); // ✅ Redirect after logout
+    navigate("/login"); 
   };
 
   return (
